@@ -35,6 +35,17 @@ npx llmfy --verbose --no-color
 - **Node.js** 18 or later
 - No GPU required; works with CPU-only (lower estimated speed)
 
+## Development & testing
+
+```bash
+npm install
+npm test          # run tests
+npm run coverage  # run tests with coverage report (text + html in ./coverage)
+npm run test:watch # watch mode
+```
+
+Tests use [Vitest](https://vitest.dev/) and cover `src/` (models, perf, format, detect with mocked hardware). Coverage is reported as statements, branches, and functions.
+
 ## References
 
 - [VRAM Requirements for Local LLMs (InsiderLLM)](https://insiderllm.com/guides/vram-requirements-local-llms/)

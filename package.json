@@ -11,7 +11,9 @@
   },
   "scripts": {
     "start": "node bin/cli.js",
-    "test": "node bin/cli.js --json"
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "keywords": [
     "llm",
@@ -21,6 +23,10 @@
     "local-ai"
   ],
   "license": "MIT",
+  "devDependencies": {
+    "vitest": "^2.1.0",
+    "@vitest/coverage-v8": "^2.1.0"
+  },
   "dependencies": {
     "commander": "^12.1.0",
     "systeminformation": "^5.23.17"
