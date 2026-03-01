@@ -69,6 +69,14 @@ describe('detect', () => {
       expect(r.gpus[0].vramGb).toBe(10);
       expect(r.isAppleSilicon).toBe(false);
     });
+    it('uses memoryTotal when vram is missing', async () => {
+      vi.mocked(si.graphics).mockResolvedValueOnce({
+        controllers: [{ vendor: 'AMD', model: 'Integrated', vram: null, memoryTotal: 2 * 1024 }],
+      });
+      const r = await getGraphics();
+      expect(r.gpus).toHaveLength(1);
+      expect(r.gpus[0].vramGb).toBe(2);
+    });
     it('Apple vendor sets isAppleSilicon true', async () => {
       vi.mocked(si.graphics).mockResolvedValueOnce({
         controllers: [{ vendor: 'Apple', model: 'M1', vram: null, memoryTotal: null }],
