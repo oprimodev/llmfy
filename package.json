@@ -1,0 +1,28 @@
+{
+  "name": "llmfy",
+  "version": "1.0.0",
+  "description": "CLI to check which LLMs you can run on your machine and expected performance",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "llmfy": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "test": "node bin/cli.js --json"
+  },
+  "keywords": [
+    "llm",
+    "cli",
+    "hardware",
+    "vram",
+    "local-ai"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "systeminformation": "^5.23.17"
+  }
+}
