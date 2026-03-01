@@ -9,6 +9,11 @@ export default defineConfig({
       reporter: ['text', 'text-summary', 'html'],
       include: ['src/**/*.js'],
       exclude: ['**/*.test.js', 'bin/**'],
+      thresholds: {
+        lines: 100,
+        statements: 100,
+        functions: 100,
+      },
     },
   },
 });

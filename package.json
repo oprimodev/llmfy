@@ -1,6 +1,6 @@
 {
   "name": "llmfy",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "CLI to check which LLMs you can run on your machine and expected performance",
   "type": "module",
   "engines": {
