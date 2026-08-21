@@ -82,3 +82,5 @@ Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) for ho
 ## License
 
 [MIT](LICENSE)
+
+<!-- Reviewify test: verifying PR shows up in the dashboard. Safe to close. -->
